@@ -7,6 +7,7 @@
 #include "stdint.h"
 #include "Arduino.h"
 #include <Button.h>
+
 // change the max7219 PORT and Pins below
 
 #define RELAY_CLOSE 7
@@ -30,8 +31,10 @@ typedef enum
   AUTO,MANUAL
 }mode_e;
 
-
-
+typedef enum
+{
+  OPENING,CLOSING,OPENED,CLOSED
+}state_e;
 
 // #define bitRead(value, bit) (((value) >> (bit)) & 0x01)
 // #define bitSet(value, bit) ((value) |= (1UL << (bit)))
